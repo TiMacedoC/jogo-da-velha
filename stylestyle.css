@@ -1,12 +1,27 @@
+/* :root {
+    --background: #fdf6ed;
+    --borders: #2C2E43;  
+    --field: #595260;
+    --player: aquamarine;
+} */
+
+:root {
+    --field: #334257;
+    --borders: #476072;  
+    --player: #548CA8;
+    --background: #EEEEEE;
+    --winnerColor: #F7FD04;
+}
+
 body{
-    background-color: rgb(253, 246, 237);
+    background-color: var(--background);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .game-container{
-    background-color: #2C2E43;
+    background-color: var(--borders);
     margin: auto;
     width: 600px;
     height: 600px;
@@ -18,7 +33,7 @@ body{
 }
 
 .field {
-    background-color: #595260;
+    background-color: var(--field);
     margin: 7px;
     border-radius: 3px;
     display: flex;
@@ -30,8 +45,8 @@ body{
 
     clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
 
-    background-color: aquamarine;
-    border: 1px solid #595260;
+    background-color: var(--player);
+    border: 1px solid var(--field);
     width: 80%;
     height: 80%;
     opacity: 0;
@@ -49,7 +64,7 @@ body{
 .circle {
     border-radius: 50%;
 
-    border: 30px solid aquamarine;
+    border: 30px solid var(--player);
     opacity: 0;
     width: 45%;
     height: 45%;
@@ -75,9 +90,9 @@ button.restartButton {
     margin-top: 10px;
     width: 90px;
     height: 40px;
-    background-color: #595260;
-    border: 4px solid #2C2E43;
-    color: antiquewhite;
+    background-color: var(--field);
+    border: 4px solid var(--borders);
+    color: var(--background);
     border-radius: 3px;
 
     transition: transform 0.5s, opacity 2s;
@@ -91,5 +106,4 @@ button.restartButton:hover{
 button.restartButton:active{
     transition: transform 0s;
     transform: scale(1);   
-
 }
