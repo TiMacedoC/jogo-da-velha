@@ -38,8 +38,6 @@ function makePlay(position, name) {
 
     plays[position] = name;
 
-    console.log(plays)
-
     setWinner()
 
     playerControl[position].className += ' active';
@@ -48,7 +46,6 @@ function makePlay(position, name) {
 
 function setWinner() {
     winningSequences.forEach(sequency => {
-        console.log("sequencia " + sequency);
 
         if (plays[sequency[0]] == plays[sequency[1]] &&
             plays[sequency[1]] == plays[sequency[2]]) {
@@ -61,8 +58,6 @@ function setWinner() {
                 playerControl[sequency[i]].parentNode.style.backgroundColor = "var(--winnerColor)";
             }
 
-        } else {
-            console.log('diferente')
         }
     });
 }
