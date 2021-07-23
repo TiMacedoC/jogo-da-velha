@@ -1,6 +1,3 @@
-const gameContainer = document.querySelector(".game-container")
-
-
 winningSequences = [
     [0, 1, 2],
     [3, 4, 5],
