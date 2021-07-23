@@ -18,6 +18,8 @@ changePlayer("axis");
 
 var plays = ['1', '2', '3', '4', '5', '6', '7', '8']
 
+
+// Muda quem o simbolo que vai ser renderizado na tela
 function changePlayer(player) {
 
     playerControl.forEach(element => {
@@ -34,6 +36,7 @@ function changePlayer(player) {
     });
 }
 
+
 function makePlay(position, name) {
 
     plays[position] = name;
@@ -44,16 +47,20 @@ function makePlay(position, name) {
     changePlayer(name);
 }
 
+
+
 function setWinner() {
     winningSequences.forEach(sequency => {
 
         if (plays[sequency[0]] == plays[sequency[1]] &&
             plays[sequency[1]] == plays[sequency[2]]) {
 
+            // Não deixa mais clicar quando é definido o ganhador
             playerControl.forEach(element => {
                 element.style.pointerEvents = "none"
             });
-
+            
+            // Pinta os espaços onde a sequencia é vencedora 
             for (i = 0; i < 3; i++) {
                 playerControl[sequency[i]].parentNode.style.backgroundColor = "var(--winnerColor)";
             }
