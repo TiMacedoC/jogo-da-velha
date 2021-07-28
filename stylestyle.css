@@ -72,10 +72,6 @@ body{
     filter:brightness(1.15);
 }
 
-/* .field:hover>.circle{
-    background-color: #F7FD04;
-} */
-
 button.restartButton {
     margin-top: 10px;
     width: 90px;
