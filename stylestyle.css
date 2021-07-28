@@ -43,10 +43,10 @@ body{
     height: 80%;
     opacity: 0;
     transform: scale(.7);
-    transition: transform 1s, opacity 1s;
+    transition: transform 1.2s, opacity 1.2s;
 }
 
-.axis:hover {
+.circle:hover, .axis:hover {
     cursor: pointer;
     transform: scale(1);
     opacity: 1;
@@ -64,17 +64,12 @@ body{
     
 }
 
-.circle:hover {
-    cursor: pointer;
-    transform: scale(1);
-    opacity: 1;
-}
-
 .field>.active {
     opacity: 1;
     transform: scale(1);
     cursor: default;
     pointer-events: none;
+    filter:brightness(1.15);
 }
 
 button.restartButton {
