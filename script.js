@@ -54,13 +54,15 @@ function setWinner() {
 
             // Não deixa mais clicar quando é definido o ganhador
             playerControl.forEach(element => {
-                element.style.pointerEvents = "none"
+                element.style.pointerEvents = "none";
+                element.parentNode.style.pointerEvents = "none";
             });
-            
+
             // Pinta os espaços onde a sequencia é vencedora 
             for (i = 0; i < 3; i++) {
                 playerControl[sequency[i]].parentNode.style.backgroundColor = "var(--winnerColor)";
             }
+
 
         }
     });
@@ -73,8 +75,13 @@ function restartGame() {
 
     plays = ['1', '2', '3', '4', '5', '6', '7', '8']
 
+
+    // VOlta a cor do quadrado para a original e devolve o poder de clicar
     playerControl.forEach(element => {
         element.parentNode.style.backgroundColor = "var(--field)";
-        element.style.pointerEvents = "auto"
+        element.style.pointerEvents = "auto";
+        element.parentNode.style.pointerEvents = "auto";
     });
+
+
 }
