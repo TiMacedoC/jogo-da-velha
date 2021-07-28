@@ -46,7 +46,7 @@ body{
     transition: transform 1.2s, opacity 1.2s;
 }
 
-.circle:hover, .axis:hover {
+.field:hover>.circle, .field:hover>.axis {
     cursor: pointer;
     transform: scale(1);
     opacity: 1;
@@ -71,6 +71,10 @@ body{
     pointer-events: none;
     filter:brightness(1.15);
 }
+
+/* .field:hover>.circle{
+    background-color: #F7FD04;
+} */
 
 button.restartButton {
     margin-top: 10px;
